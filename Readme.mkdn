@@ -1,0 +1,75 @@
+ruby-mobile-appium-template
+============================
+
+Description
+-----------
+
+Want to do functional testing with Selenium and Cucumber for a non-Ruby based project?
+This project is a perfect companion if you have a Java, Scala, .NET, or "fill in the blank" project where you'd like to introduce some Ruby, but more
+importantly functional testing.
+
+This is a simple "archetype" gem giving you the basics to run
+cucumber features in any directory.
+
+This project consists of the latest cucumber, capybara, and selenium-webdriver gems.
+
+If you are developing a Ruby based project, then there are plenty of companion gems like cucumber-rails, cucumber-sinatra, etc that I'd recommend.
+In fact, this gem is influenced by the directory structure you'd get if using the cucumber-rails gem.
+
+Pre-requisites
+--------------
+
+Got Ruby? No? Get yourself setup with RVM.
+For the best cross platform / OS support I'd recommend running this gem and your test suite with JRuby.
+This is especially important if you have folks developing on Windows, Linux, and OSX.
+At the moment I'm using JRuby 1.5.6 (rvm install jruby-1.5.6)
+
+Installation
+------------
+
+Get the gem installed on your machine.
+
+    * gem install ruby-mobile-appium-template
+
+Set an environment variable called FUNCTIONAL_TESTING_HOST to dictate what environment
+the tests run against. If you don't set this, no worries, it will your test suite against http://localhost.
+This setting can be found in the env.rb.
+
+If you need to change the default for your project you should feel free.
+
+    * Example: export FUNCTIONAL_TESTING_HOST = http://your_target_environment:pick_a_port
+
+Set an environment variable called REMOTE_SELENIUM to trigger your test suite on
+a remote Selenium server. More configuration details can be found in the env.rb on the remote Selenium server.
+You'll also want to set the environment variable REMOTE_SELENIUM_HOST to tell your test suite the location of the remote
+Selenium server you are hitting.
+
+    * Example: export REMOTE_SELENIUM = true; export REMOTE_SELENIUM_HOST = http://selenium-grid.my-company
+
+There are a couple assumptions including that your remote selenium server is running on port 4444.
+Of course you change and customize this to your needs in env.rb.
+
+Usage
+-----
+
+     ruby-mobile-appium-template the_name_of_your_new_functional_test_directory
+           create
+           create  features
+           create  features/example.feature
+           create  features/support
+           create  features/support/env.rb
+           create  features/step_definitions/web_steps.rb
+     cd the_name_of_your_new_functional_test_directory
+
+     # use Bundler to grab all your dependencies
+     bundle
+
+     # now run the whole suite
+     rake cucumber
+
+     # to run a specific Feature
+     bundle exec cucumber feature/example.feature
+
+     # to run a specific Scenario
+     bundle exec cucumber -n"Search \"Functional Testing with Cucumber\" on Google"
+

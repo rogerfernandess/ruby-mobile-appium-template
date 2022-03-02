@@ -1,0 +1,5 @@
+*.gem
+*.iml
+*.ipr
+*.idea/
+Gemfile.lock
