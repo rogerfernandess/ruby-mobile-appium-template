@@ -26,13 +26,15 @@ describe RubyAppium do
 
     it 'should make an empty directory' do
       @ruby_appium.stub!(:gemfile_rakefile_cukeyml)
-      @ruby_appium.stub!(:features_directory_and_files)
+      @ruby_appium.stub!(:create_folders)
+      @ruby_appium.stub!(:create_files)
       @ruby_appium.should_receive(:make_empty_directory)
       RubyAppium.start
     end
 
     it 'should create a new Gemfile, Rakefile, and cucumber.yml' do
-      @ruby_appium.stub!(:features_directory_and_files)
+      @ruby_appium.stub!(:create_folders)
+      @ruby_appium.stub!(:create_files)
       @ruby_appium.stub!(:make_empty_directory)
       @ruby_appium.should_receive(:gemfile_rakefile_cukeyml)
       RubyAppium.start
@@ -41,7 +43,7 @@ describe RubyAppium do
     it 'should create a new features directory'  do
       @ruby_appium.stub!(:gemfile_rakefile_cukeyml)
       @ruby_appium.stub!(:make_empty_directory)
-      @ruby_appium.should_receive(:features_directory_and_files)
+      @ruby_appium.should_receive(:create_folders)
       RubyAppium.start
     end
 

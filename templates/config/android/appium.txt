@@ -1,0 +1,18 @@
+[caps]
+automationName="UiAutomator2"
+platformName = "Android"
+
+#deviceName = "emulator-5554"
+app = "./app/android/app-debug.apk"
+avd = "Pixel_2_API_30"
+
+appPackage = ""
+appActivity = ""
+
+newCommandTimeout = 3600
+autoGrantPermissions = true
+
+[appium_lib]
+wait = 20
+debug = true
+export_session = true

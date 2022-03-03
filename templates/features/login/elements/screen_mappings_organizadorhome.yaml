@@ -1,0 +1,29 @@
+ios:
+  xxxx:
+    tipo_busca: :xpath
+    value: "" 
+  xxxx:
+    tipo_busca: :id
+    value: ""  
+  xxxx:
+    tipo_busca: :class
+    value: "" 
+  xxxx:
+    tipo_busca: :accessibility_id
+    value: ""  
+android:
+  perfil:
+    tipo_busca: :xpath
+    value: "//android.view.View" 
+  logo:
+    tipo_busca: :xpath
+    value: "//android.widget.ImageView" 
+  xxxx:
+    tipo_busca: :id
+    value: ""  
+  xxxx:
+    tipo_busca: :class
+    value: "" 
+  xxxx:
+    tipo_busca: :accessibility_id
+    value: ""  

@@ -1,41 +1,21 @@
-require 'rubygems'
-require "bundler/setup"
+# frozen_string_literal: true
 
+require 'appium_lib'
+require 'pry'
 require 'cucumber'
-require 'cucumber/formatter/unicode' # Remove this line if you don't want Cucumber Unicode support
-require 'cucumber/web/tableish'
-
-require 'capybara'
-require 'capybara/cucumber'
-require 'capybara/session'
-
-require 'rspec'
 require 'selenium-webdriver'
+require 'allure-cucumber'
+require_relative 'utils'
 
-Capybara.default_selector = :css
-Capybara.default_wait_time = 60
+verify_platform()
+verify_where()
 
-#Swap this for the environment you are testing
-Capybara.app_host = ENV['FUNCTIONAL_TESTING_HOST'] || "http://localhost"
-
-Capybara.default_driver = :selenium
-
-custom_firefox_profile = Selenium::WebDriver::Firefox::Profile.new
-# this setting prevents the loading of images which speeds things up dramatically
-custom_firefox_profile["permissions.default.image"] = 2
-
-if ENV['REMOTE_SELENIUM'] == true || ENV['REMOTE_SELENIUM'] == "true"
-  Capybara.register_driver :selenium do |app|
-    remote_capabilities = Selenium::WebDriver::Remote::Capabilities.firefox
-    remote_capabilities.firefox_profile = custom_firefox_profile
-    Capybara::Selenium::Driver.new(app,
-                                   :browser => :remote,
-                                   :desired_capabilities => remote_capabilities,
-                                   :url => "#{ENV['REMOTE_SELENIUM_HOST']}:4444/wd/hub")
-  end
-else
-  Capybara.register_driver :selenium do |app|
-    Capybara::Selenium::Driver.new(app,
-                                   :profile => custom_firefox_profile)
-  end
+def load_appium_configuration
+  caps = Appium.load_appium_txt file: File.join("#{Dir.pwd}/config/#{$platform}/#{$where == 'farm' ? 'appium_farm.txt' : 'appium.txt'}")
+  caps[:caps][:oauthClientId] = 'oauth2-PFoYDkJ2wrTokwrS3l5Q@microfocus.com' #colocar valor do clientID gerado nas credenciais da Farm UFT
+  caps[:caps][:oauthClientSecret] = 'x1V3tLi5Mi1qMEqkJJGD' #colocar valor da ClienteSecret gerado nas credenciais da Farm UFT
+  return caps 
 end
+
+$wait = Selenium::WebDriver::Wait.new(timeout: 60)
+Appium::Driver.new(load_appium_configuration(), true)

@@ -1,3 +1,6 @@
-default: --format progress --strict --tags ~@wip features
-wip: --tags @wip:3 --wip features
-rerun: --format progress features --format rerun --out rerun.txt --strict --tags ~@wip
+
+android_local: PLATFORM='android' WHERE='local' --format AllureCucumber::CucumberFormatter  --out allure-results/android/
+ios_local: PLATFORM='ios' WHERE='local' --format AllureCucumber::CucumberFormatter  --out allure-results/ios/
+android_farm: PLATFORM='android' WHERE='farm' --format AllureCucumber::CucumberFormatter  --out allure-results/android/
+ios_farm: PLATFORM='ios' WHERE='farm' --format AllureCucumber::CucumberFormatter  --out allure-results/ios/
+report: --format AllureCucumber::CucumberFormatter  --out allure-results/android/

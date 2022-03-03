@@ -1,0 +1,18 @@
+[caps]
+automationName = "XCUITest"
+platformName = "iOS"
+
+deviceName = "iPhone 11"
+platformVersion = "13.2"
+
+deviceName = "moto g(7) play"
+app = "./app/ios/Runner.app"
+udid = "54A4C77B-6E4C-46B8-883E-2BF7EA2B2F63"
+
+autoAcceptAlerts = true
+autoGrantPermissions = true
+
+[appium_lib]
+wait = 20
+debug = false
+export_session = true

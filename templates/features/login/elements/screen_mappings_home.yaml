@@ -1,0 +1,35 @@
+ios:
+  xxxx:
+    tipo_busca: :xpath
+    value: "" 
+  xxxx:
+    tipo_busca: :id
+    value: ""  
+  xxxx:
+    tipo_busca: :class
+    value: "" 
+  xxxx:
+    tipo_busca: :accessibility_id
+    value: ""  
+android:
+  telaWalkThrough:
+    tipo_busca: :xpath
+    value: "//android.widget.ImageView[1]"  
+  btnWalkThrough:
+    tipo_busca: :xpath
+    value: "//android.widget.Button[contains(@text, 'Vamos começar?') or contains(@content-desc, 'Vamos começar?')]" 
+  imagemHome:
+    tipo_busca: :xpath
+    value: "//android.widget.ImageView[2]" 
+  xxxx:
+    tipo_busca: :xpath
+    value: ""  
+  xxxx:
+    tipo_busca: :id
+    value: ""  
+  xxxx:
+    tipo_busca: :class
+    value: "" 
+  xxxx:
+    tipo_busca: :accessibility_id
+    value: ""  

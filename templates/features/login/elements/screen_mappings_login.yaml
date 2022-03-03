@@ -1,0 +1,44 @@
+ios:
+  x1:
+    tipo_busca: :xpath
+    value: "" 
+  x2:
+    tipo_busca: :id
+    value: "" 
+  x3:
+    tipo_busca: :class
+    value: "" 
+  x4:
+    tipo_busca: :accessibility_id
+    value: "" 
+android:
+  campoCPF:
+    tipo_busca: :xpath
+    value: "//android.view.View[contains(@text,'Digite aqui') or contains(@content-desc,'Digite aqui')]" 
+  preencherCpf:
+    tipo_busca: :xpath
+    value: "//android.widget.EditText" 
+  preencherSenha:
+    tipo_busca: :xpath
+    value: "//android.widget.EditText[contains(@text,'Digite sua senha')]" 
+  btnContinuar:
+    tipo_busca: :xpath
+    value: "//android.widget.Button[contains(@text,'Continuar') or contains(@content-desc,'Continuar')]" 
+  btnAtivarAcessoBio:
+    tipo_busca: :xpath
+    value: "//android.widget.Button[contains(@text,'Ativar acesso por biometria') or contains(@content-desc,'Ativar acesso por biometria')]" 
+  btnDeixarParaDepois:
+    tipo_busca: :xpath
+    value: "//android.view.View[contains(@text,'Deixar para depois') or contains(@content-desc,'Deixar para depois')]" 
+  btnOkEntendiBio:
+    tipo_busca: :xpath
+    value: "//android.widget.Button[contains(@text,'Ok, entendi') or contains(@content-desc,'Ok, entendi')]" 
+  x1:
+    tipo_busca: :id
+    value: "" 
+  x2:
+    tipo_busca: :class
+    value: "" 
+  x3:
+    tipo_busca: :accessibility_id
+    value: "" 

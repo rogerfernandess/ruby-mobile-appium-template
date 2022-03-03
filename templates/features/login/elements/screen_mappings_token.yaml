@@ -1,0 +1,30 @@
+ios:
+  xxxx:
+    tipo_busca: :xpath
+    value: "" 
+  xxxx:
+    tipo_busca: :id
+    value: ""  
+  xxxx:
+    tipo_busca: :class
+    value: "" 
+  xxxx:
+    tipo_busca: :accessibility_id
+    value: ""    
+android:
+  btnDeixarParaDepois:
+    tipo_busca: :xpath
+    value: "//android.view.View[contains(@text,'Deixar para depois') or contains(@content-desc,'Deixar para depois')]" 
+  prevwIrTelaInicialencherCpf:
+    tipo_busca: :xpath
+    value: "//android.view.View[contains(@text,'Ir para a tela inicial') or contains(@content-desc,'Ir para a tela inicial')]" 
+  xxxx:
+    tipo_busca: :id
+    value: ""  
+  xxxx:
+    tipo_busca: :class
+    value: "" 
+  xxxx:
+    tipo_busca: :accessibility_id
+    value: ""    
+

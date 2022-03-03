@@ -1,0 +1,17 @@
+[caps]
+automationName = "XCUITest"
+platformName = "iOS"
+
+# Device Farm
+server_url = ""
+tenantId = "999999999"
+udid = "ca3a1864dcf5fe2f79b2ec43765096820f604254"
+bundleId = ""
+
+autoAcceptAlerts = true
+autoGrantPermissions = true
+
+[appium_lib]
+wait = 20
+debug = false
+export_session = true

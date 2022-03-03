@@ -1,0 +1,21 @@
+[caps]
+platformName = "Android"
+automationName ="UiAutomator2"
+
+# Device Farm
+
+tenantId = "999999999"
+udid = "520348e2596bb38f"
+server_url = ""
+appPackage = ""
+appActivity = ""
+mcWorkspaceName = ""
+
+autoGrantPermissions = true
+newCommandTimeout = 3600
+
+[appium_lib]
+wait = 20
+debug = true
+export_session = true
+
