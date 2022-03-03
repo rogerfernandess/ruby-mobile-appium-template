@@ -52,10 +52,15 @@ rvm install ruby-<versão da lista>
 5.3: Adicione a configuração para JAVA_HOME e ANDROID_HOME 
 
 export JAVA_HOME=$(/usr/libexec/java_home) 
+
 export ANDROID_HOME=/Users/<seu user>/Library/Android/sdk 
+
 export PATH="$PATH:$ANDROID_HOME/platform-tools" 
+
 export PATH="$PATH:$ANDROID_HOME/tools" 
+
 export PATH="$PATH:$ANDROID_HOME/tools/bin" 
+
 export PATH="$PATH:$ANDROID_HOME/emulator"
 
 5.4: Salve suas alterações utilizando "ctrl+o" e "return". E para sair "ctrl+x" 
