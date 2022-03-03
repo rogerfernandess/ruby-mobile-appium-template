@@ -85,47 +85,87 @@ Usage
 -----
 
 1 - Vá ao diretório que você deseja criar o projeto pelo terminal;
+
 2 - Digite o comando abaixo no console, substituindo o nomeDoProjeto pelo nome que você deseja dar ao seu projeto.
 
 ruby-mobile-appium-template nomeDoProjeto
+
       create
+
       create  Gemfile
+
       create  Rakefile
+
       create  cucumber.yml
+
       create  app
+
       create  config
+
       create  features
+      
       create  app/ios
+      
       create  app/android
+      
       create  config/ios
+      
       create  config/android
+      
       create  features/login
+      
       create  features/support
+      
       create  features/login/features
+      
       create  features/login/data
+      
       create  features/login/elements
+      
       create  features/login/pageobjects
+      
       create  features/login/steps
+      
       create  config/ios/appium.txt
+      
       create  config/ios/appium_farm.txt
+      
       create  config/android/appium.txt
+      
       create  config/android/appium_farm.txt
+      
       create  features/support/env.rb
+      
       create  features/support/hooks.rb
+      
       create  features/support/utils.rb
+      
       create  features/support/appium_custom.rb
+      
       create  features/login/features/login.feature
+      
       create  features/login/data/login.yaml
+      
       create  features/login/elements/screen_mappings_home.yaml
+      
       create  features/login/elements/screen_mappings_login.yaml
+      
       create  features/login/elements/screen_mappings_organizadorhome.yaml
+      
       create  features/login/elements/screen_mappings_token.yaml
+      
       create  features/login/pageobjects/home.rb
+      
       create  features/login/pageobjects/login.rb
+      
       create  features/login/pageobjects/loginPages.rb
+      
       create  features/login/pageobjects/organizadorHome.rb
+      
       create  features/login/pageobjects/token.rb
+      
       create  features/login/steps/login_steps.rb
+
 
 3 - Após isso digite no console
 
